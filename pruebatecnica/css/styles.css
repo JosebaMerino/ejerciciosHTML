@@ -59,7 +59,7 @@ td:hover{
 
 .parallax{
 
-  background-image: url(/images/office.jpg);  
+  background-image: url(/pruebatecnica/images/office.jpg);  
 
   /* Set a specific height */
   height: 500px;
@@ -80,12 +80,13 @@ td:hover{
 
 @keyframes mymove {
     from {
-        background-color: #0099CC;  
-        border-radius: 0;
+        background-color: rgba(163, 13, 105, 0.836);  
+        border-radius: 20%;
+        transform: rotate(360deg);
     }
     to {
-        background-color:red;  
-        border-radius: 50%;
+        background-color:rgba(255, 0, 170, 0.466);  
+        border-radius: 25%;
     }
   }
 
@@ -95,5 +96,5 @@ td:hover{
     width: 150px;
     height: 150px;
     background-color: #0099CC;  
-    animation: mymove 2s infinite alternate;
+    animation: mymove 0.1s infinite ;
 }

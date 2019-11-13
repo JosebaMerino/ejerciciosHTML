@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" id="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Etiquetas basicas</title>
+    <base href="/pruebatecnica/">
+</head>
+
+<body>
+    <div style="width: 50%; margin: auto; background-color: rgba(230, 230, 230, 0.726);">
+        <h1 id="titulo"> Etiquetas basicas de HTML </h1>
+        <h2> Enlaces (anchors) </h2>
+        <p>
+            <a href="https://hack.chat/?IPARTEK" target="_blank">Chat no oficial</a>
+            <br>
+            <a href="index.html"> Index </a>
+            <br>
+            <a href="ejemplos/html/etiquetas-basicas.html#titulo"> Ir al titulo</a>
+            <br>
+            <a href="tel:+34944329288">Llamar IPARTEK</a>
+            <br>
+            <a href="mailto:abc@mail.com"> Mandar un correo al autor</a>
+        </p>
+        <h2> Botón que hace cosas</h2>
+        <div>
+            <button onclick="deleteHTMLroot()"> Calcular PI </button>
+        </div>
+        <h2>La tabla de Alumnos pero con captions</h2>
+        <div>
+            <div>
+                <table id="Tabla" style="width: 100%;">
+                    <caption> Tabla de alum@s y su disposicion en el aula </caption>
+
+                    <tr>
+                        <td> Aitor </td>
+                        <td>Iker </td>
+                    </tr>
+                    <tr>
+                        <td> Endika </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Iñigo </td>
+                        <td> Kiryl</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Carlos </td>
+                        <td>Maria </td>
+                    </tr>
+                    <tr>
+                        <td>Alejandro </td>
+                        <td>Ana </td>
+                    </tr>
+                    <tr>
+                        <td>Cristian</td>
+                        <td> Erlantz </td>
+                    </tr>
+                    <tr>
+                        <td>Raúl</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>Joseba</td>
+                        <td>Mikel</td>
+                    </tr>
+                    <tr>
+                        <td onclick="alert('hola')" colspan="2" style="border: 20px solid black;"> Ander</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h2> Listas de cosas </h2>
+        <div>
+            <p>
+                <span>Pasos para andar</span>
+                <ol>
+                    <li>Mover pierna izquierda o derecha</li>
+                    <li>Mover pierna contraria</li>
+                    <li>Repetir</li>
+                </ol>
+            </p>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    <script src="ejemplos/html/etiquetas-basicas.js"></script>
+</body>
+
+</html>
