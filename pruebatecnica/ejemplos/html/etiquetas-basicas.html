@@ -7,11 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Etiquetas basicas</title>
     <base href="/pruebatecnica/">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div style="width: 50%; margin: auto; background-color: rgba(230, 230, 230, 0.726);">
+    <style>
+        dt {
+            font-weight: 800;
+
+        }
+
+        .main {
+            margin: 50px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.096);
+        }
+
+        .tachado {
+            text-decoration-line: line-through;
+        }
+
+        .flotante {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        span.flotante {
+            display: inline-block;
+            height: 75px;
+            width: 75px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: grey;
+        }
+    </style>
+    <div class="main">
+        <span class="flotante">
+            <a href="ejemplos/html/etiquetas-basicas.html#titulo" style="margin: auto;"> Arribaaaa</a>
+        </span>
         <h1 id="titulo"> Etiquetas basicas de HTML </h1>
+        <section>
         <h2> Enlaces (anchors) </h2>
         <p>
             <a href="https://hack.chat/?IPARTEK" target="_blank">Chat no oficial</a>
@@ -24,10 +62,14 @@
             <br>
             <a href="mailto:abc@mail.com"> Mandar un correo al autor</a>
         </p>
+    </section>
+    <section>
         <h2> Botón que hace cosas</h2>
         <div>
             <button onclick="deleteHTMLroot()"> Calcular PI </button>
         </div>
+    </section>
+    <section>
         <h2>La tabla de Alumnos pero con captions</h2>
         <div>
             <div>
@@ -72,6 +114,8 @@
                 </table>
             </div>
         </div>
+    </section>
+    <section>
         <h2> Listas de cosas </h2>
         <div>
             <p>
@@ -83,9 +127,94 @@
                 </ol>
             </p>
             <p>
-                
+                <p> Unordered List </p>
+                <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Vero, magni omnis!</li>
+                    <li>Facere, amet nulla!</li>
+                </ul>
+            </p>
+            <p>
+                <p> Definition list </p>
+                <dl>
+                    <dt>Lorem.</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis quae modi id dolores earum a quibusdam! Beatae itaque voluptate illo quaerat quisquam porro! Voluptate ratione cupiditate assumenda ut labore.</dd>
+                    <dt>Est.</dt>
+                    <dd>Dolore consequatur totam eligendi, animi cumque sunt? Nesciunt, excepturi? Veritatis molestiae tempora temporibus, molestias repellendus quibusdam non rem beatae eius numquam saepe explicabo ipsa corporis quod est tempore vero? Atque.</dd>
+                    <dt>Eum!</dt>
+                    <dd>Illum cumque magni sapiente perspiciatis atque voluptatibus veritatis fugiat, nam nesciunt itaque. Nostrum dolorum quis sunt recusandae iure ipsam omnis nam earum autem inventore qui quasi, esse expedita odio excepturi.</dd>
+                </dl>
             </p>
         </div>
+    </section>
+
+        <section>
+            <h2> IFRAME </h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5iUB31h2Hzs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2> Imagen </h2>
+            <img src="images/html5-cheat-sheet.png" alt="Todas las etiquetas añadidas en HTML5" height="500px">
+        </section>
+
+        <section>
+            <h2> Meter </h2>
+            <div>
+                <span>Downloading...</span>
+                <meter min="0" max="100" value="30"> 30%</meter>
+            </div>
+        </section>
+
+        <section>
+            <h2> Progress</h2>
+            <div>
+                <span> Loading assets... </span>
+                <progress value="30" max="50"> 30% </progress>
+            </div>
+        </section>
+
+        <section>
+            <h2> No script</h2>
+            <p> Si no ves nada debajo deshabilita javascript</p>
+            <noscript>
+                <p>Si me ves es porque javascript no esta habilitado</p> 
+                <p>Te dejo esta imagen: </p>
+                <img src="images/html5-cheat-sheet.png" alt="Todas las etiquetas añadidas en HTML5" height="500px">
+            </noscript>
+        </section>
+
+        <section>
+            <h2> Unos cuantos parrafos sin motivo alguno</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis quibusdam temporibus voluptatem eveniet quo aliquid ullam quas voluptatum dicta?</p>
+            <p>Adipisci, distinctio iste possimus sequi non consequatur, pariatur aspernatur dolorum tenetur eaque quam at temporibus consectetur expedita dolor ullam quis.</p>
+            <p>Voluptatem deserunt maiores voluptas aut sunt ea saepe expedita earum, magni commodi tenetur nobis animi qui in id vitae adipisci.</p>
+            <p>Laboriosam, eos iure explicabo sunt aperiam blanditiis alias, minus asperiores, enim autem similique veritatis commodi sint iste excepturi? Voluptatibus, optio.</p>
+            <p>Consectetur est qui asperiores vitae, maxime possimus provident praesentium, quis ipsa quo iste aliquid minus. Quaerat repellat ea placeat aspernatur?</p>
+        </section>
+
+        <section>
+            <h2> Pre </h2>
+            <p>
+                <pre>
+Buenas ,
+    puedo
+        poner
+            texto
+                asi
+                    y
+                        nadie
+                            me 
+                                lo
+                                    cambiiiiiiiii                                         ia
+                </pre>
+            </p>
+        </section>
+
+        <section>
+            <h2> Texto tachado </h2>
+            <p> Me han dicho que algo de este texto debe quedarse <span class="tachado">tachado</span> </p>
+        </section>
     </div>
     <script src="ejemplos/html/etiquetas-basicas.js"></script>
 </body>
