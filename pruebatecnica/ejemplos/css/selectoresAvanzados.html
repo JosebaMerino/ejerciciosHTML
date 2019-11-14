@@ -23,9 +23,9 @@
             * 
             </pre>
         </p>
-        <h1>Selectores avanzados</h1>
+        <h1> Selectores avanzados </h1>
         <section>
-            <h2>SELECTORES AVANZADOS</h2>
+            <h2><a href="http://www.campus.formacion.ipartek.com/moodle/mod/page/view.php?id=2187" target="_blank"> Selectores avanzados </a></h2>
             <h3> Selectores de hijos</h3>
             <div id="selectoresHijos">
                 <p> Buenas soy su primer y unico hijo</p>
@@ -48,7 +48,7 @@
             </div>
         </section>
         <section>
-            <h2>PSEUDO SELECTORES</h2>
+            <h2><a href="http://www.campus.formacion.ipartek.com/moodle/mod/page/view.php?id=2188" target="_blank"> PSEUDO SELECTORES</a></h2>
             <h3>Before</h3>
             <div>
                 <p id="pBefore"> Va a poner algo antes</p>
@@ -59,7 +59,14 @@
                 <p id="pAfter"> Va a poner algo despues</p>
             </div>
 
-            <h3></h3>
+            <h3> First letter</h3>
+            <div id="pseudo_first-letter">
+                <p>Lorem ipsum dolor sit.</p>
+                <p>Praesentium odio consectetur rem!</p>
+                <p>Reiciendis qui accusantium porro.</p>
+                <p>Sit quae molestias hic!</p>
+                <p>Repudiandae aperiam non voluptatum!</p>
+            </div>
         </section>
     </div>
     <style>
@@ -109,7 +116,11 @@
             color: greenyellow;
         }
 
-        /**/
+        /* FIRST-LETTER*/
+        #pseudo_first-letter *::first-letter {
+            font-size: 2em;
+            color: rgb(228, 0, 0);
+        }
     </style>
 </body>
 
