@@ -67,6 +67,68 @@
                 <p>Sit quae molestias hic!</p>
                 <p>Repudiandae aperiam non voluptatum!</p>
             </div>
+
+            <h3> First line </h3>
+            <div id="pseudo_line">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eaque nisi iste ratione sint sunt, nostrum soluta quis ex delectus labore, consequatur expedita quas veniam quidem alias eligendi ut voluptates, numquam natus vel ipsum unde autem! Repudiandae enim deleniti perspiciatis, eius, possimus laborum quaerat, exercitationem similique voluptatem voluptate fuga vitae numquam beatae voluptatum nulla. Earum ex laboriosam animi excepturi. Aliquid inventore facilis laborum placeat modi aperiam dignissimos, dolore consequatur labore perspiciatis veniam iste tenetur suscipit enim quidem? Suscipit, dolorum! Modi accusantium repudiandae omnis, voluptatibus, voluptatum rerum harum fugiat, quis officiis labore earum possimus eligendi. Provident minus qui perspiciatis aliquid laboriosam.</p>
+                <p>Facilis ipsam explicabo tempore itaque veritatis, sequi incidunt libero officia, ea, consequuntur rem. Sequi nobis quo ratione dolor minus! In magnam, aliquid et iste voluptate itaque dicta ipsa, eos aliquam sequi exercitationem neque? Exercitationem iusto aspernatur quae veniam, culpa eius non enim? Officia rerum accusantium saepe illo. Aliquam adipisci dolore asperiores voluptates distinctio id excepturi, debitis quas quae saepe repellat error porro doloribus ea cupiditate voluptas similique neque sed temporibus provident nobis sapiente? Quod possimus porro nemo! Suscipit magnam neque fugit amet nesciunt at aperiam voluptates nostrum! Aliquid reiciendis nobis, consequatur quae iste, temporibus voluptate quas tempora nesciunt, pariatur quo?</p>
+            </div>
+
+            <h3> Selection </h3>
+            <div id="pseudo_selection">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ea sapiente cum asperiores. Quia quaerat deleniti eaque maxime delectus fugit velit, corrupti excepturi rem officia! Error architecto recusandae ipsum sint.</p>
+                <p>Provident libero error tempora animi? Et eaque accusamus ratione quia sequi corporis. Vel, sit reiciendis pariatur distinctio voluptate odio dignissimos rerum ducimus ipsa vero obcaecati provident vitae inventore accusantium! Exercitationem.</p>
+                <p>Ad aliquam impedit fugiat fuga, molestias dolorem eligendi? Doloremque consectetur sed amet, voluptates exercitationem, atque suscipit voluptas modi laborum mollitia fuga quos id ipsa dolor nobis doloribus tempora accusantium perspiciatis.</p>
+            </div>
+
+            <h3> Empty </h3>
+            <div id="pseudo_empty">
+                <div></div>
+                <div>Como tengo contenido no me muestro con fondo rojo, pero mis amigos si</div>
+                <div></div>
+            </div>
+
+            <h3> First child</h3>
+            <div id="pseudo_first_child">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Quod porro fugit architecto saepe!</p>
+                <p>Laboriosam quisquam ducimus provident beatae?</p>
+                <p>Veniam molestias vero necessitatibus rem.</p>
+            </div>
+
+            <h3> First of type </h3>
+            <div id="pseudo_first_of_type">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Reiciendis, qui aliquam.</p>
+                <p>Eum, hic. Accusantium.</p>
+                <span>Lorem, ipsum dolor.</span>
+                <span>Fugiat, ratione necessitatibus!</span>
+                <span>Neque, eveniet? Iure.</span>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem incidunt, unde fuga vero quae itaque velit? Autem culpa excepturi esse qui impedit mollitia sit? Molestias nostrum provident ducimus vel dolor.</div>
+                <div>Omnis dolorem quas perspiciatis dolores perferendis quam provident nesciunt molestiae similique, ipsam dolorum in ea vel nobis pariatur eveniet cumque, eos iure temporibus facilis architecto deserunt. Fugiat eaque optio officiis!</div>
+                <div>Dicta a molestiae harum. Voluptatem repudiandae, ipsa perferendis odio nisi optio nemo molestiae atque repellendus tenetur. Nostrum perferendis quod nihil, quaerat distinctio ratione, similique explicabo ullam aliquid ipsum obcaecati suscipit?</div>
+            </div>
+
+            <h3> Hover </h3>
+            <div id="pseudo_hover">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Exercitationem, natus ducimus!</p>
+                <p>Provident, doloribus libero?</p>
+            </div>
+
+            <h3> Nth child</h3>
+            <div id="pseudo_nth_child">
+                <p>Lorem, ipsum dolor.</p>
+                <p>Sunt, nisi cupiditate.</p>
+                <p>Tempore, voluptates vel.</p>
+                <p>Modi, ipsum quibusdam.</p>
+                <p>Nihil, dicta rerum?</p>
+                <p>Dolorem, natus nihil.</p>
+                <p>Quidem, magnam expedita?</p>
+                <p>Commodi, saepe minima.</p>
+                <p>Repudiandae, velit illum.</p>
+                <p>Maxime, explicabo officia?</p>
+            </div>
         </section>
     </div>
     <style>
@@ -120,6 +182,51 @@
         #pseudo_first-letter *::first-letter {
             font-size: 2em;
             color: rgb(228, 0, 0);
+        }
+
+        /* FIRST LINE */
+        #pseudo_line *::first-line {
+            color: red;
+        }
+
+        /* SELECTION */
+
+        #pseudo_selection *::selection {
+            background-color: black;
+            color: rgb(0, 252, 0);
+        }
+
+        /* EMPTY */
+        #pseudo_empty *:empty {
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            background-color: red;
+            border: 0.5em solid black;
+        }
+
+        /* FIRST CHILD*/
+        #pseudo_first_child *:first-child {
+            color: green;
+        }
+
+        /* FIRST OF TYPE */
+        #pseudo_first_of_type *:first-of-type {
+            background-color: aqua;
+        }
+
+        /* HOVER */
+        #pseudo_hover *:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        /* NTH CHILD*/
+        #pseudo_nth_child *:nth-child(2n) {
+            color: red;
+        }
+        #pseudo_nth_child *:nth-child(3) {
+            color: green;
         }
     </style>
 </body>
