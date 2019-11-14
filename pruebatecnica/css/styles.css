@@ -98,3 +98,9 @@ td:hover{
     background-color: #0099CC;  
     animation: mymove 0.1s infinite ;
 }
+
+code {
+    color: rgb(25, 202, 25);
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}

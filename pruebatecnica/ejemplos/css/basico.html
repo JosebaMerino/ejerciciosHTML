@@ -61,6 +61,26 @@
         .super-importante {
             color: lightblue !important; /* es la más importante */
         }
+
+        /* Selector descendente
+        */
+        .container p {
+            color: orange;
+        }
+
+        .container p span {
+            background: black;
+        }
+
+        /* Selecciona solo los parrafos con la clase "especial" no es descendiente*/
+        p.especial {
+            color: purple;
+            background-color: whitesmoke;
+        }
+        p .especial{
+            font-size: 2em;
+            font-weight: 600; /* bold */
+        }
     </style>
 
     <h2> Tipos de selectores</h2>
@@ -71,6 +91,13 @@
     <iframe width="100%" src="https://www.youtube.com/embed/ARaU6uGOa_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- JavaScript-->
     <script src="js/main.js"></script>
+
+    <h2> Selector decendente A B</h2>
+    <div class="container">
+        <p><span>Hola </span>Vamos a dar estilo solo a estos parrafos que estan dentro de un <code>div .container</code></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, cupiditate praesentium! Molestias assumenda accusamus quos blanditiis dolorum labore. Odit adipisci cum voluptatibus enim sapiente, recusandae suscipit vel laborum ad eius!</p>
+        <p class="especial">Lorem <span> ipsum dolor</span> sit amet consectetur adipisicing elit. Asperiores eaque obcaecati explicabo consequatur vero rerum libero quaerat accusamus nemo, exercitationem cupiditate reiciendis aut tempora, deleniti inventore laudantium tempore enim labore.</p>
+    </div>
 
 </body>
 
