@@ -19,3 +19,10 @@ selectores avanzados (solo la pagina)
     |
     |- index.html (punto de entrada de la aplicacion)
 ```
+data-atributes
+
+///////////////////////////////////////////////////
+
+# HTML
+
+Toda etiqueta de  HTML tiene el comportamiento de caja

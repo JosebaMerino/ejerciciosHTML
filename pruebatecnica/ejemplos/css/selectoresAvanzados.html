@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <base href="/pruebatecnica/">
 </head>
+
 <body>
-    
+    <div class="main">
+        <a href="index.html"> Volver </a>
+
+        <p>
+            <pre>
+            atributo content
+            Un ejemplo: 
+            * after
+            * before
+            * first-letter -> Hacer la primera letra mas grande y cambiar de color
+            * 
+            </pre>
+        </p>
+        <h1>Selectores avanzados</h1>
+        <section>
+            <h2>SELECTORES AVANZADOS</h2>
+            <h3> Selectores de hijos</h3>
+            <div id="selectoresHijos">
+                <p> Buenas soy su primer y unico hijo</p>
+                <span>Soy su hijo pero soy un spam y el estilo solo afecta a los P</span>
+            </div>
+
+            <h3>Selector adyacente</h3>
+            <div id="selector-adyacente">
+                <p>Hola </p>
+                <span> Soy adyacente al de arriba, por eso soy rojo</span>
+            </div>
+
+            <h3> Selector de atributo </h3>
+            <div id="selector-atributo">
+                <p data-iden="1">Lorem ipsum dolor sit amet.</p>
+                <p data-iden="2">Quisquam autem ex molestias ab.</p>
+                <p data-iden="2">Vitae aliquam nihil provident quia.</p>
+                <p data-iden="3">Asperiores nobis natus dolor consequatur?</p>
+                <p data-iden="1">Numquam fugit ratione eum aliquam.</p>
+            </div>
+        </section>
+        <section>
+            <h2>PSEUDO SELECTORES</h2>
+            <h3>Before</h3>
+            <div>
+                <p id="pBefore"> Va a poner algo antes</p>
+            </div>
+
+            <h3>After</h3>
+            <div>
+                <p id="pAfter"> Va a poner algo despues</p>
+            </div>
+
+            <h3></h3>
+        </section>
+    </div>
+    <style>
+        .main {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.144);
+        }
+
+        /* Selectores de hijos */
+        #selectoresHijos {
+            color: green;
+        }
+
+        #selectoresHijos>p {
+            color: red;
+        }
+
+        /* Selector adyacente */
+        #selector-adyacente p + span {
+            color: red;
+        }
+
+        /* Selector de atributos */
+
+        #selector-atributo *[data-iden="1"] {
+            color: blue;
+        }
+
+        #selector-atributo *[data-iden="2"] {
+            color: green;
+        }
+        #selector-atributo *[data-iden="3"] {
+            color: pink;
+        }
+
+        /* PSEUDOSELECTORES */
+        /* BEFORE */
+        #pBefore::before {
+            content: 'BEFORE';
+            color: red;
+        }
+
+        /* AFTER */
+        #pAfter::after {
+            content: 'AFTER';
+            color: greenyellow;
+        }
+
+        /**/
+    </style>
 </body>
+
 </html>

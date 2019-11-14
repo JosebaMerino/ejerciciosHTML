@@ -104,3 +104,8 @@ code {
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.link_section {
+    border: 1px solid black;
+    margin: 5px;
+}

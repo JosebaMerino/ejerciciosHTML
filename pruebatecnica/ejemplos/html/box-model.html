@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box model</title>
+    <base href="/pruebatecnica/ ">
+</head>
+
+<body>
+    <style>
+        span {
+            border: 3px dotted red;
+            padding: 5px;
+        }
+
+        p {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        p.prueba {
+            color: teal;
+            border: 5px solid green;
+            margin: 10px;
+
+            /* Lo deabajo sirve tanto para padding como para margin */
+
+            /* padding: 20px; /* shorthand 4 lados */
+            /*padding: 20px 40px; /* arriba y abajo 20, izquierda y derecha 40*/
+            padding: 20px 2px 40px;
+            /* arriba 20, 2 izquierda y derecha, 40 abajo */
+        }
+
+        .box {
+            box-sizing: border-box;
+
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+
+            border: 2px solid teal;
+            background-color: royalblue;
+            border-radius: 10px;
+
+            color: #FFF;
+            font-size: 5em;
+            text-align: center;
+        }
+
+        section {
+            padding: 10px;
+            margin-bottom: 50px;
+            background-color: rgb(248, 249, 226);
+
+            -webkit-box-shadow: 0px 0px 10px 1px rgba(0,13,250,1);
+            -moz-box-shadow: 0px 0px 10px 1px rgba(0,13,250,1); /* lo que tiene delante es un prefijo y se hace para que se adapte */
+            box-shadow: 0px 0px 10px 1px rgba(0,13,250,1);
+        }
+    </style>
+    <a href="index.html"> Volver </a>
+    <h1> Box model </h1>
+    <p class="prueba"> Toda etiqueta de HTML tiene un comportamiento de caja</p>
+
+    <section>
+        <h2> Display </h2>
+        <p><code>display</code> es el atributo para gestionar si es linea o bloque, existen muchos mas displays.
+            Ejemplo:
+            flexbox que lo veremos mas adelante</p>
+        <p>*trick: usar inspector para verlo</p>
+        <dl>
+            <dt>block</dt>
+            <dd>Elemento que ocupa todo el ancho del elemento padre</dd>
+            <dt>inline</dt>
+            <dd>Elemento que ocupa lo que tenga su contenido</dd>
+            <dt>inline-block</dt>
+            <dd>Es una cosa hibrida de las dos anteriores</dd>
+        </dl>
+
+        <p>
+            Lorem ipsum dolor <span> sit amet</span>, consectetur adipisicing elit. Quam, modi fugiat quaerat esse unde
+            incidunt aut debitis dolorum quidem porro, expedita a, error maxime nobis nihil eum. Quia, saepe nemo?
+        </p>
+
+        <p>Se puede meter un elemento de display inline dentro de uno de block. Pero no se puede meter un elemento con
+            diplay block en un inline</p>
+
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </section>
+    <section>
+        <h2> Overflow </h2>
+        <p></p>
+    </section>
+</body>
+
+</html>
