@@ -22,50 +22,63 @@
 </head>
 
 <body>
-    <div class="parallax">
-        <div>
+    <style>
+        .fondo-gris {
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.733);
+        }
+    </style>
+    <div class=" parallax ">
+        <div class="fondo-gris">
             <h1>Ipartek HTML5</h1>
             <h2>Wellcome to HTML</h2>
         </div>
     </div>
 
+    <section>
+            <nav>
+                <h2>Indice de contenidos </h2>
+                <div class="link_section">
+                    <p> CSS </p>
+                    <a href="ejemplos/css/animaciones.html"> Animacion</a>
+                    <br>
+                    <a href="ejemplos/css/especificidad.html"> Especificidad</a>
+                    <br>
+                    <a href="ejemplos/css/selectoresBasicos.html"> Selectores basicos</a>
+                    <br>
+                    <a href="ejemplos/css/selectoresAvanzados.html"> Selectores avanzados</a>
+                    <br>
+                </div>
+                <div class="link_section">
+                    <p> HTML </p>
+                    <a href="ejemplos/html/etiquetas-basicas.html"> Etiquetas basicas de html</a>
+                    <br>
+                    <a href="ejemplos/html/box-model.html"> Box model</a>
+                </div>
+            </nav>
+        </section>
+
+    <section>
     <h3>Voluntario <span id="nombre">X</span></h3>
     <button onclick="buscarVoluntario()">¿Quien lee?</button>
+</section>
 
-
+<section>
     <h2>EMMET</h2>
     <a target="_blank" href="https://docs.emmet.io/cheat-sheet/"> Emmet cheatsheet</a>
-
+</section>
+<section>
     <h2>Tabla basica de HTML</h2>
     <a target="_blank" href="https://www.w3schools.com/html/html_tables.asp"> W3schools </a>
-
-    <h2></h2>
+</section>
+<section>
+    <h2> Comprobar soporte </h2>
     <a href="https://caniuse.com/">Soprte de los navegadores para comprobar compatibilidad con navegadores JS, HTML y
         CSS</a>
-    <hr>
-    <br>
-    <br>
+    </section>
 
-    <nav>
-        <p>Indice de contenidos </p>
-        <div class="link_section">
-            <p> CSS </p>
-            <a href="ejemplos/css/animaciones.html"> Animacion</a>
-            <br>
-            <a href="ejemplos/css/especificidad.html"> Especificidad</a>
-            <br>
-            <a href="ejemplos/css/selectoresBasicos.html"> Selectores basicos</a>
-            <br>
-            <a href="ejemplos/css/selectoresAvanzados.html"> Selectores avanzados</a>
-            <br>
-        </div>
-        <div class="link_section">
-            <p> HTML </p>
-            <a href="ejemplos/html/etiquetas-basicas.html"> Etiquetas basicas de html</a>
-            <br>
-            <a href="ejemplos/html/box-model.html"> Box model</a>
-        </div>
-    </nav>
+    <section>
+        <h2> Tabla con los alumn@s que forman la clase </h2>
     <div>
         <table id="Tabla">
             <tr>
@@ -105,6 +118,7 @@
             </tr>
         </table>
     </div>
+</section>
 
     <!-- JavaScript-->
     <script src="js/main.js"></script>
