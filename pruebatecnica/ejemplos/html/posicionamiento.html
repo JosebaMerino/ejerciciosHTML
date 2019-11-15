@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <base href="/pruebatecnica/">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="index.html"> Volver </a>
+    <h1>Posicionamiento</h1>
+    <p>Se suele usar con top y left</p>
+    <section>
+        <h2>Relativo</h2>
+        <p> Desplaza el elemento de su posicion pero su "hitbox" se queda donde estaba. Digamos que lo unico que se mueve es el dibujo </p>
+        <div>
+            <div class="box" style="position: relative; top: 0.5em;">1</div>
+            <div class="box" style="position: relative; left: 0.5em;">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>Fixed - css3</h2>
+        <p>  </p>
+    </section>
+    <section>
+        <h2>Sticky</h2>
+    </section>
+    <section>
+        <h2>Absoluto</h2>
+        <p> la posición de una caja se establece de forma absoluta respecto de su <u>elemento contenedor</u>  y el resto de elementos de la página ignoran la nueva posición del elemento </p>
+        <p>El primer elemento contenedor que esté posicionado de cualquier forma diferente a position: static se convierte en la referencia que determina la posición de la caja posicionada de forma absoluta.</p>
+        <style>
+            .contenedor {
+                /* Acordarse siempre de que sea relative el contenedor */
+                position: relative;
+                
+                margin: auto;
+                height: 200px;
+                width: 200px;
+
+                overflow: hidden;
+            }
+
+            .contenedor:hover .texto {
+                bottom: -10px;
+                background-color: black;
+                transition: background bottom 2s;
+            }
+
+            .absoluto {
+                /* Posicionamos de forma absoluta sobre el contenedor */
+                position: absolute;
+                right: 10px;
+                top: 10px;
+
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                padding: 0;
+                text-align: center;
+
+                background: red;
+                border-radius: 50%;
+                padding: 10px;
+                color: black;
+
+            }
+
+            .contenedor .texto {
+                background-color: rgba(0, 0, 0, 0.30);
+                position: absolute;
+                bottom: -190px;
+                transition: bottom 2s;
+            }
+
+            .contenedor .texto p {
+                text-align: justify;
+                color: white;
+            }
+        </style>
+        
+        <div class="contenedor">
+            <span class="absoluto"> 1 </span>
+            <img src="http://lorempixel.com/200/200/" alt="imagen aleatoria">
+            <div class="texto">
+                <h3>Titulo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem saepe officiis optio minus, ratione distinctio ipsam et non eos doloribus consectetur magnam voluptates. Neque nulla culpa ratione aliquam porro!</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+footer fijo.
+
+menu. Sticky
+
+absoluto, mover un item dentro de una imagen (un corazon)
+
+fixed boton de bolber arriba (abajo, derecha)

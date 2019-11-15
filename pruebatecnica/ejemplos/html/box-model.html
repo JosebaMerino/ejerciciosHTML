@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Box model</title>
     <base href="/pruebatecnica/ ">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -16,10 +18,10 @@
             padding: 5px;
         }
 
-        p {
+        /*p {
             border: 1px solid black;
             padding: 5px;
-        }
+        }*/
 
         p.prueba {
             color: teal;
@@ -50,18 +52,19 @@
             text-align: center;
         }
 
-        section {
-            padding: 10px;
-            margin-bottom: 50px;
-            background-color: rgb(248, 249, 226);
-
-            -webkit-box-shadow: 0px 0px 10px 1px rgba(0,13,250,1);
-            -moz-box-shadow: 0px 0px 10px 1px rgba(0,13,250,1); /* lo que tiene delante es un prefijo y se hace para que se adapte */
-            box-shadow: 0px 0px 10px 1px rgba(0,13,250,1);
+        .box-texto {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid olive;
         }
+
+        
     </style>
     <a href="index.html"> Volver </a>
-    <h1> Box model </h1>
+
+    <h1> Visualizacion </h1>
+    <h2> Box model </h2>
     <p class="prueba"> Toda etiqueta de HTML tiene un comportamiento de caja</p>
 
     <section>
@@ -91,8 +94,44 @@
         <div class="box">2</div>
     </section>
     <section>
+        <h2> Visibility</h2>
+        <p> Existen dos formas de ocultar elementos de HTML</p>
+        <p>Usando <code>visibility</code></p>
+        <div class="box">1</div>
+        <div class="box" style="visibility: hidden;">2</div>
+        <div class="box">3</div>
+        <p>Usando <code>display = none</code></p>
+        <div class="box">1</div>
+        <div class="box" style="display: none;">2</div>
+        <div class="box">3</div>
+    </section>
+
+    <section>
         <h2> Overflow </h2>
-        <p></p>
+        <p>Como se muestra los elementos cuando no entran en el contenedor padre. Pueden ser <code>	visible | hidden | scroll | auto</code></p>
+        <p>Tambien se puede usar <code>overflow-x</code> y <code>overflow-y</code></p>
+    
+        <div class="box-texto" style="overflow: hidden;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, natus nobis. Similique ea quo amet corporis odit? Incidunt officiis, aut at sint vel fuga exercitationem quaerat explicabo, optio tenetur doloribus.</p>
+    </div>
+    <div class="box-texto" style="overflow: scroll;">
+        <p>Quaerat iusto fugiat repellat totam provident sequi! Est facilis cupiditate voluptatem quam atque repellat aspernatur delectus beatae, suscipit expedita quaerat eos consequatur quae doloribus commodi dicta ratione odit nam distinctio.</p>
+    </div>
+    <div class="box-texto" style="overflow: auto;">
+        <p>Magnam molestiae corrupti voluptatibus recusandae illum magni molestias quod minima consequuntur voluptate aliquid sapiente excepturi est officiis natus deleniti iusto minus, iste dolor et at aspernatur suscipit. Ducimus, quisquam consequuntur?</p>
+    </div>
+    <div class="box-texto" style="overflow: visible;">
+        <p>Soluta odio facere assumenda amet nobis iure culpa reiciendis nemo id dolores neque illum accusantium itaque, animi ex possimus in debitis optio cupiditate quas, saepe aut quod quam. Quidem, quam.</p>
+    </div>
+
+    </section>
+
+    <section>
+        <h2>Z-index</h2>
+        <p>Se encarga de la profundidad de los elementos cuando se solapan.</p>
+        <div class="box" style="background-color: darkgreen; position: relative; left: 141px; z-index: -1; top: 30px;">1</div>
+        <div class="box" style="z-index: 2; position: relative; left: 50px; top: -20px; background-color: red;">2</div>
+        <div class="box" style="z-index: 3; position: relative;"> 3</div>
     </section>
 </body>
 

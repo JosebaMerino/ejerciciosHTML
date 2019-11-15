@@ -16,6 +16,17 @@
     padding: 0;
 }*/
 
+
+/*
+Orden de los componentes de un css
+    1. reset
+    2. @keyframes
+    3. TODAS etiquetas estilos generales
+    4. layouts -> Las secciones de las paginas, footer, articles
+    5. clases
+    6. ids (cosas más especificas)
+
+*/
 body{
     font-size: 16px;
     font-family: Arial, sans-serif;
@@ -33,6 +44,22 @@ h1 , h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+main {
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: blueviolet;
+    width: 100%;
+}
+
+nav {
+    background-color: #0099CC;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
 
 
 
@@ -110,11 +137,38 @@ code {
 .link_section {
     border: 1px solid black;
     margin: 5px;
+    display: inline-block;
+    height: 2em;
+    overflow: hidden;
 }
 
+.link_section:hover {
+    background: white;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
 section {
     border: 1px solid black;
-    background-color: rgb(233, 230, 201);
-    margin-bottom: 20px;
-    padding: 10px;
+    background-color: palegoldenrod;
+    margin-bottom: 0px;
+    padding: 0px;
 }
+
+.box {
+    box-sizing: border-box;
+
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid teal;
+    background-color: royalblue;
+    border-radius: 10px;
+
+    color: #FFF;
+    font-size: 5em;
+    text-align: center;
+}  
