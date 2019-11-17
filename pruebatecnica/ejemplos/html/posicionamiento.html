@@ -10,7 +10,7 @@
 </head>
 <body>
     <a href="index.html"> Volver </a>
-    <h1>Posicionamiento</h1>
+    <h1 id="inicio">Posicionamiento</h1>
     <p>Se suele usar con top y left</p>
     <section>
         <h2>Relativo</h2>
@@ -23,7 +23,13 @@
     </section>
     <section>
         <h2>Fixed - css3</h2>
-        <p>  </p>
+        <p>
+            <div class="esquina">
+                <span> <a href="ejemplos/html/posicionamiento.html#inicio">&uarr;</a> </span>
+                
+
+            </div>
+        </p>
     </section>
     <section>
         <h2>Sticky</h2>
@@ -79,6 +85,26 @@
             .contenedor .texto p {
                 text-align: justify;
                 color: white;
+            }
+
+            .esquina {
+                position: fixed;
+                display: inline-block;
+
+                width: 4em;
+                height: 4em;
+
+                border: 2px solid black;
+                border-radius: 50%;
+                background-color: rgb(89, 89, 133);
+
+                right: 0.5em;
+                bottom: 0.5em;
+
+                text-align: center;
+            }
+            .esquina span {
+                font-size: 3em;
             }
         </style>
         
