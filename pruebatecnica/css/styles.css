@@ -56,7 +56,7 @@ footer {
 
 nav {
     background-color: #0099CC;
-    padding: 20px;
+    padding: 0px;
     position: sticky;
     top: 0;
 }
@@ -139,21 +139,22 @@ code {
     margin: 5px;
     display: inline-block;
     height: 2em;
+    width: 5em;
     overflow: hidden;
 }
 
 .link_section:hover {
     background: white;
     width: 100%;
-    height: 200px;
+    height: 10em;
     position: absolute;
-    top: 10px;
     left: 0;
+    transition: height 2s ease;
 }
 section {
     border: 1px solid black;
     background-color: palegoldenrod;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     padding: 0px;
 }
 
