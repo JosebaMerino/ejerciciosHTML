@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <base href="/pruebatecnica/">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        form {
+            border: 1px solid grey;
+            padding: 20px;
+        }    
+    </style>
+
+    <a href="index.html"></a>
+    <h1> Formulario </h1>
+    <section>
+        <p> Todo formulario va dentro de una etiqueta <code>form</code></p>
+        <p> Usar siempre <code>form</code> y botón <code>submit</code></p>
+        <p> El atributo <code>action</code> sirve para indicar el nombre del controlador en el sevidor</p>
+        <p> El atributo <code>name</code> de un <code>input</code> sirve para especificar el nombre del parametro a enviar al servidor</p>
+        <p> <code>autofocus</code> permite que coja el foco en cuanto se entra</p>
+        <p> <code>required</code> requiere que el campo no este vacio</p>
+        <p> <code>pattern</code> se le asigna una expresion regular y confirma que el contenido coincida con la regex</p>
+
+        <section>
+            <h2> Input </h2>
+            <h3> Atributos generales</h3>
+            <dl>
+                <dt>type</dt>
+                <dd>indica el tipo del input (text,password...)</dd>
+
+                <dt>name</dt>
+                <dd>indica el nombre con el que se va a mandar el campo al servidor</dd>
+
+                <dt>id</dt>
+                <dd>indica el id con el que se identifica el elemento</dd>
+            </dl>
+
+            <h3> type="text"</h3>
+            <dl>
+                <dt>placeholder</dt>
+                <dd> Muestra un texto dentro del input que da una sugerencia de que es lo que se desea introducir</dd>
+            </dl>
+            
+            <h3> type="number"</h3>
+            <p> <code>min</code> indica cual es el numero minimo que puede tener (el numero incluido)</p>
+            <p> <code>max</code> indica cual es el numero maximo que puede tener (el numero incluido)</p>
+            <p> <code>step</code> indica cuantos numero incrementa o decrementa cuando se pulsa una de las flechas</p>
+        </section>
+        <form method="POST" action="ejemplos/html/formulario.html">
+            <fieldset>
+                <legend> Datos personales </legend>
+                <label for="nombre">Nombre: </label>
+                <input 
+                    type="text" 
+                    name="nombre"
+                    id="nombre"
+                    placeholder="minimo 3 letras maximo 10"
+                    required
+                    autofocus
+                    pattern=".{3,10}"
+                >
+                <br>
+                <label for="contrasena">Contraseña: </label>
+                <input 
+                    type="password" 
+                    name="contrasena"
+                    id="contrasena"
+                    placeholder="minimo 3 letras maximo 10"
+                    required
+                    pattern=".{3,10}"
+                >
+                <button onclick="verTexto(event)"> Ver contraseña</button>
+
+                <script>
+                    function verTexto(event) {
+                        console.trace("Click boton ver");
+                        let iContrasena = document.getElementById('contrasena');
+                        if(iContrasena.type === "text"){
+                            iContrasena.type = "password";
+                            event.target.innerHTML = 'Ver';
+                        } else {
+                            iContrasena.type = "text";
+                            event.target.innerHTML = 'Ocultar';
+                        }
+
+                        
+                        
+                    }
+                </script>
+                <br>
+                <label for="sexo">Sexo: </label>
+                <select name="sexo" id="sexo">
+                    <option value="h">Hombre</option>
+                    <option value="m">Mujer</option>
+                    <option value="se" selected>Sin especificar</option>
+                </select>
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" required placeholder="numero de años 0-99" min="0" max="99" step="0.5">
+                <br>
+                <label for="deportes"> Deportes: </label>
+                <br>
+                <input type="checkbox" name="deportes" id="deportes" value="1"> Surf
+                <br>
+                <input type="checkbox" name="deportes" id="deportes" value="2" checked> Quidditch
+                <br>
+                <input type="checkbox" name="deportes" id="deportes" value="3"> Jugger
+                <br>
+                <input type="checkbox" name="deportes" id="deportes" value="4"> Petanca
+                <br>
+            </fieldset>
+            <label for="situacion"> Situacion actual:</label> <br>
+            <input type="radio" name="situacion" id="situacion" value="0" checked> Trabajando <br>
+            <input type="radio" name="situacion" id="situacion" value="1"> Desempleado <br>
+
+            <label for="observaciones"></label>
+            <textarea name="observaciones" id="observaciones" cols="30" rows="10" placeholder="Tu opinion es muy importante para nosotros"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html> 
